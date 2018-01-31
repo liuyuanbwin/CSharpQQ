@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QQAvatar", "QQAvatar\QQAvatar.csproj", "{4D229C26-3AEE-47B6-A914-8FF33997084A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D229C26-3AEE-47B6-A914-8FF33997084A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D229C26-3AEE-47B6-A914-8FF33997084A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D229C26-3AEE-47B6-A914-8FF33997084A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D229C26-3AEE-47B6-A914-8FF33997084A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C03B5DE-90D4-4390-9CC0-10FA83B25D54}
+	EndGlobalSection
+EndGlobal

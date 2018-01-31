@@ -1,0 +1,10 @@
+E:\CSharp_Project\QQAvatar\QQAvatar\bin\Debug\QQAvatar.exe.config
+E:\CSharp_Project\QQAvatar\QQAvatar\bin\Debug\QQAvatar.exe
+E:\CSharp_Project\QQAvatar\QQAvatar\bin\Debug\QQAvatar.pdb
+E:\CSharp_Project\QQAvatar\QQAvatar\obj\Debug\QQAvatar.csprojResolveAssemblyReference.cache
+E:\CSharp_Project\QQAvatar\QQAvatar\obj\Debug\QQAvatar.LoginForm.resources
+E:\CSharp_Project\QQAvatar\QQAvatar\obj\Debug\QQAvatar.Properties.Resources.resources
+E:\CSharp_Project\QQAvatar\QQAvatar\obj\Debug\QQAvatar.csproj.GenerateResource.Cache
+E:\CSharp_Project\QQAvatar\QQAvatar\obj\Debug\QQAvatar.csproj.CoreCompileInputs.cache
+E:\CSharp_Project\QQAvatar\QQAvatar\obj\Debug\QQAvatar.exe
+E:\CSharp_Project\QQAvatar\QQAvatar\obj\Debug\QQAvatar.pdb
