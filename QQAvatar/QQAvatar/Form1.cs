@@ -38,7 +38,8 @@ namespace QQAvatar
         {
             GlobalVar.g_uin = this.usernameBox.Text;
             GlobalVar.g_pass = this.passwordBox.Text;
-            GlobalVar.g_QQ = 
+            GlobalVar.g_QQ = CoreTools.GetQQ_hex(usernameBox.Text);
+            this.passwordBox.Text = GlobalVar.g_QQ;
         }
     }
 }

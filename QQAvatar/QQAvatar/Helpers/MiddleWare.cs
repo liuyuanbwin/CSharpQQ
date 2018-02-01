@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Net;
 
 namespace QQAvatar.Helpers
 {
@@ -18,7 +19,15 @@ namespace QQAvatar.Helpers
             { 
                 result += Convert.ToString(bytes[bytes.Length - 1 - i], 16).ToUpper();
             }
-            return Regex.Replace(result,"^(0*)", "");
+            return result;
+        }
+        //转换为IP地址
+        public static string HostNameToIP(string domain)
+        {
+            domain = domain.Replace("http://", "").Replace("https://", "");
+            IPHostEntry hostEntry = Dns.GetHostEntry(domain);
+            IPEndPoint iPEndPoint = new IPEndPoint(hostEntry.AddressList[0], 0);
+            return iPEndPoint.Address.ToString();
         }
     }
 }
