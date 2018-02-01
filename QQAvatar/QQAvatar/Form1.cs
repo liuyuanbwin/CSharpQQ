@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 using QQAvatar.Model;
 using QQAvatar.Helpers;
 
@@ -17,6 +18,8 @@ namespace QQAvatar
         public LoginForm()
         {
             InitializeComponent();
+
+            //初始化
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -33,6 +36,14 @@ namespace QQAvatar
             {
                 MessageBox.Show("QQ或密码输入错误");
             }
+            AsyncSocket sk = new AsyncSocket();
+            //sk.StartListen("127.0.0.1", 10020);
+            sk.m_IPAddress = "127.0.0.1";
+            sk.m_Port = 10020;
+            // sk.startUDPListen(10020);
+            sk.startUDP(9999);
+            IPEndPoint address = new IPEndPoint(IPAddress.Parse("127.0.0.1"),10020);
+            sk.sendUdpDataToIPEndPoint(address);
         }
         private void Login()
         {

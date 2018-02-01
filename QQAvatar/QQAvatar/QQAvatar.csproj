@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SanNiuSignal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24b2c69310cb5e8a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SanNiuSignal.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +55,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\AsyncSocket.cs" />
     <Compile Include="Helpers\CoreTools.cs" />
     <Compile Include="Helpers\MiddleWare.cs" />
     <Compile Include="Helpers\SystemScale.cs" />
