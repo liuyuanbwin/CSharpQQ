@@ -40,25 +40,25 @@ namespace QQAvatar.Helpers
         //接受文本数据回调
         private void acceptData(IPEndPoint end, string  str)
         {
-            MessageBox.Show(str);
+            MessageBox.Show("###接受到的------",str);
         }
 
         //当数据发送成功回调
         private void sendDataSuccess(IPEndPoint end)
         {
-            MessageBox.Show("数据发送成功");
+            MessageBox.Show("###数据发送成功");
         }
 
         //客户端关闭回调
         private void clientClose()
         {
-            MessageBox.Show("客户端已经关闭");
+            MessageBox.Show("###客户端已经关闭");
         }
 
         //客户端意外断开回调
         private void clientLost(string str)
         {
-            MessageBox.Show("客户端意外断开 原因为: " + str);
+            MessageBox.Show("###客户端意外断开 原因为: " + str);
         }
 
         //自动重连回调
@@ -111,7 +111,7 @@ namespace QQAvatar.Helpers
         public void startUDP(int port)
         {
             udptx = TxStart.startUdp();
-            udptx.Port = port;//13091;//如果持续坚挺,在这里设置
+            udptx.Port = 8000;//13091;//如果持续坚挺,在这里设置
             udptx.AcceptString += new TxDelegate<IPEndPoint, string>(UdpAcceptData);
             udptx.dateSuccess += new TxDelegate<IPEndPoint>(UdpDataSuccess);//接受成功数据回调
             udptx.EngineClose += new TxDelegate(clientClose);//客户端引擎关闭
@@ -135,13 +135,13 @@ namespace QQAvatar.Helpers
         private void UdpAcceptData(IPEndPoint ipEndPoint, string str)
         {
             _udpIPEndPoint = ipEndPoint;
-            MessageBox.Show("收到来自 " + ipEndPoint.ToString() + " 的信息: " + str);
+            MessageBox.Show("###收到来自 " + ipEndPoint.ToString() + " 的信息: " + str);
         }
 
         //发送消息成功回调
         public void UdpDataSuccess(IPEndPoint ipEndPoint)
         {
-            MessageBox.Show("已向 " + ipEndPoint.ToString() + " 发送成功!");
+            MessageBox.Show("####已向 " + ipEndPoint.ToString() + " 发送成功!");
         }
 
         //发送UDP信息
@@ -150,9 +150,10 @@ namespace QQAvatar.Helpers
             udptx.sendMessage(UdpIPEndPoint, str);
         }
 
-        public void sendUdpDataToIPEndPoint(IPEndPoint point)
+        public void sendUdpDataToIPEndPoint(IPEndPoint point,string data)
         {
-            udptx.sendMessage(point, "testtest");
+            IPEndPoint address = new IPEndPoint(IPAddress.Parse("192.168.199.145"), 8000);
+            udptx.sendMessage(address, data);
         }
         #endregion
     }

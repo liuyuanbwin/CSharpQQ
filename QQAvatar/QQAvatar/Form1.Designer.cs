@@ -39,6 +39,8 @@
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(167, 21);
             this.usernameBox.TabIndex = 0;
+            this.usernameBox.Text = "3409055413";
+            this.usernameBox.TextChanged += new System.EventHandler(this.usernameBox_TextChanged);
             // 
             // passwordBox
             // 
@@ -46,6 +48,7 @@
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(167, 21);
             this.passwordBox.TabIndex = 1;
+            this.passwordBox.Text = "wolaile1986A";
             // 
             // loginButton
             // 
